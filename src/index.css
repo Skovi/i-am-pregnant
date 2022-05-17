@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  /* background-color: #FFF4F8; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./font//Raleway/Raleway-Italic-VariableFont_wght.ttf') format('ttf');
+}
