@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './register.module.css';
+import './register.scss';
 
 export const Register = () => {
   const [user, setUser] = useState({
@@ -26,8 +26,8 @@ export const Register = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <form onSubmit={onSubmitForm} className={styles.form}>
+    <div className='container'>
+      <form onSubmit={onSubmitForm} className='form'>
         <h2>Регистрация</h2>
         <input
           type='text'
@@ -50,12 +50,15 @@ export const Register = () => {
           value={user.password}
           onChange={onChangeInput}
         />
-        <button onClick={onClick}>Сохранить</button>
+        <button 
+        onClick={onClick}
+        className='button'
+        >Сохранить</button>
       </form>
-      <div className={styles.links}>
+      <div className='links'>
         <Link
           to='/login'
-          className={styles.link}
+          className='link'
         >
           Войти
         </Link>

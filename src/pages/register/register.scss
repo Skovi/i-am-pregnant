@@ -28,11 +28,10 @@ input {
   font-family: 'Raleway', sans-serif;
   margin: 10px 0;
 }
-input:focus {
-  
-}
 
-button {
+input:focus {}
+
+.button {
   background: #DE596D;
   border: 1px solid #DE596D;
   border-radius: 50px;
@@ -44,10 +43,6 @@ button {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
   margin: 10px 0;
-}
-
-button:hover {
-  
 }
 
 .links {
@@ -64,15 +59,10 @@ button:hover {
   margin: 3px;
 }
 
+button:hover {}
 
-@media (min-width: 425px) {
-  
-}
+@media (min-width: 425px) {}
 
-@media (min-width: 990px) {
-  
-}
+@media (min-width: 990px) {}
 
-@media (min-width: 1200px) {
-  
-}
+@media (min-width: 1200px) {}

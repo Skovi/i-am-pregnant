@@ -1,0 +1,31 @@
+@media (min-width: 425px) {
+  
+}
+
+@media (min-width: 990px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+div {
+  display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.a {
+  flex: 1 0 auto;
+}
+
+.b {
+  height: 30px;
+  background: blue;
+  flex: 0 0 auto;
+}
+
+.c {
+  flex: 0 0 auto;
+}

@@ -1,4 +1,5 @@
-import styles from './main.module.css';
+import React from 'react';
+import './main.scss';
 
 export const Main = () => {
   return (

@@ -1,6 +1,7 @@
+import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './login.module.css';
+import './login.scss';
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -25,8 +26,8 @@ export const Login = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <form onSubmit={onSubmitForm} className={styles.form}>
+    <div className='container'>
+      <form onSubmit={onSubmitForm} className='form'>
         <h2>Вход</h2>
         <input
           type='text'
@@ -42,18 +43,21 @@ export const Login = () => {
           value={user.password}
           onChange={onChangeInput}
         />
-        <button onClick={onClick}>Сохранить</button>
+        <button 
+        onClick={onClick}
+        className='button'
+        >Сохранить</button>
       </form>
-      <div className={styles.links}>
+      <div className='links'>
         <Link
           to='/register'
-          className={styles.link}
+          className='link'
         >
           Зарегистрироваться
         </Link>
         <Link
           to='forgot-password'
-          className={styles.link}
+          className='link'
         >
           Восстановить пароль
         </Link>

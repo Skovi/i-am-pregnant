@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './reset-password.module.css';
+import './reset-password.scss';
 
 export const ResetPassword = () => {
   const [user, setUser] = useState({
@@ -25,8 +25,8 @@ export const ResetPassword = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <form onSubmit={onSubmitForm} className={styles.form}>
+    <div className='container'>
+      <form onSubmit={onSubmitForm} className='form'>
         <h2>Восстановление пароля</h2>
         <input
           type='text'
@@ -42,18 +42,21 @@ export const ResetPassword = () => {
           value={user.token}
           onChange={onChangeInput}
         />
-        <button onClick={onClick}>Восстановить</button>
+        <button 
+        onClick={onClick}
+        className='button'
+        >Восстановить</button>
       </form>
-      <div className={styles.links}>
+      <div className='links'>
         <Link
           to='/login'
-          className={styles.link}
+          className='link'
         >
           Войти
         </Link>
         <Link
           to='/register'
-          className={styles.link}
+          className='link'
         >
           Зарегистрироваться
         </Link>

@@ -1,5 +1,11 @@
-import { FC } from "react";
-import { Redirect, Route, RouteProps, useLocation } from "react-router-dom";
+import React, { FC } from "react";
+import './protected-route.scss';
+import { 
+  Redirect, 
+  Route, 
+  RouteProps, 
+  useLocation 
+} from "react-router-dom";
 
 type ProtectedRouteProps = {
   onlyUnAuth?: boolean;
