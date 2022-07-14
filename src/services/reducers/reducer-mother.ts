@@ -1,18 +1,27 @@
 import {
   REGISTER_REQUEST,
   REGISTER_SUCCESS,
-  REGISTER_FAILED,
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
-  LOGIN_FAILED,
   LOGOUT_REQUEST,
   LOGOUT_SUCCESS,
-  LOGOUT_FAILED,
   TMotherActions,
- } from "../actions/action-mother";
-import { stateChild } from "../initial-state/child";
+  GET_DATE_MOTHER_REQUEST,
+  GET_DATE_MOTHER_SUCCESS,
+  UPDATE_DATE_MOTHER_REQUEST,
+  UPDATE_DATE_MOTHER_SUCCESS,
+} from "../actions/mother/action-type-mother";
+import {
+  REGISTER_FAILED,
+  LOGIN_FAILED,
+  LOGOUT_FAILED,
+  GET_DATE_MOTHER_FAILED,
+  UPDATE_DATE_MOTHER_FAILED,
+} from "../actions/mother/action-creator-mother";
+import { stateMother, TStateMother } from "../initial-state/mother";
+import { dataMother } from "../../utils/data";
 
-export const reducerMother = (state = stateChild, action: TMotherActions) => {
+export const reducerMother = (state = stateMother, action: TMotherActions): TStateMother => {
   switch (action.type) {
 
     case REGISTER_REQUEST: {
@@ -27,7 +36,14 @@ export const reducerMother = (state = stateChild, action: TMotherActions) => {
         ...state,
         registerRequest: false,
         registerFailed: false,
-        mother: action.mother,
+        mother: {
+          firstName: dataMother.mother.firstName,
+          lastName: dataMother.mother.lastName,
+          email: dataMother.mother.email,
+          birthday: dataMother.mother.birthday,
+          firstDayOfLastPeriod: dataMother.mother.firstName,
+          conceptionDate: dataMother.mother.conceptionDate
+        },
         isAuth: true,
       };
     }
@@ -38,7 +54,7 @@ export const reducerMother = (state = stateChild, action: TMotherActions) => {
         registerFailed: true,
       };
     }
-    
+
     case LOGIN_REQUEST: {
       return {
         ...state,
@@ -52,7 +68,14 @@ export const reducerMother = (state = stateChild, action: TMotherActions) => {
         loginRequest: false,
         loginFailed: false,
         isAuth: true,
-        mother: action.mother,
+        mother: {
+          firstName: dataMother.mother.firstName,
+          lastName: dataMother.mother.lastName,
+          email: dataMother.mother.email,
+          birthday: dataMother.mother.birthday,
+          firstDayOfLastPeriod: dataMother.mother.firstName,
+          conceptionDate: dataMother.mother.conceptionDate
+        },
       };
     }
     case LOGIN_FAILED: {
@@ -62,7 +85,7 @@ export const reducerMother = (state = stateChild, action: TMotherActions) => {
         loginFailed: true,
       };
     }
-    
+
     case LOGOUT_REQUEST: {
       return {
         ...state,
@@ -75,9 +98,13 @@ export const reducerMother = (state = stateChild, action: TMotherActions) => {
         ...state,
         logoutFailed: false,
         logoutRequest: false,
-        user: {
-          name: '',
+        mother: {
+          firstName: '',
+          lastName: '',
           email: '',
+          birthday: '',
+          firstDayOfLastPeriod: '',
+          conceptionDate: ''
         },
         isAuth: false,
       };
@@ -88,6 +115,64 @@ export const reducerMother = (state = stateChild, action: TMotherActions) => {
         logoutFailed: true,
         logoutRequest: false,
       };
+    }
+    case GET_DATE_MOTHER_REQUEST: {
+      return {
+        ...state,
+        getDateMotherRequest: true,
+        getDateMotherFailed: false,
+      }
+    }
+    case GET_DATE_MOTHER_SUCCESS: {
+      return {
+        ...state,
+        getDateMotherRequest: false,
+        getDateMotherFailed: false,
+        mother: {
+          firstName: dataMother.mother.firstName,
+          lastName: dataMother.mother.lastName,
+          email: dataMother.mother.email,
+          birthday: dataMother.mother.birthday,
+          firstDayOfLastPeriod: dataMother.mother.firstName,
+          conceptionDate: dataMother.mother.conceptionDate
+        },
+      }
+    }
+    case GET_DATE_MOTHER_FAILED: {
+      return {
+        ...state,
+        getDateMotherRequest: false,
+        getDateMotherFailed: true,
+      }
+    }
+    case UPDATE_DATE_MOTHER_REQUEST: {
+      return {
+        ...state,
+        getDateMotherRequest: false,
+        getDateMotherFailed: true,
+      }
+    }
+    case UPDATE_DATE_MOTHER_SUCCESS: {
+      return {
+        ...state,
+        getDateMotherRequest: false,
+        getDateMotherFailed: true,
+        mother: {
+          firstName: dataMother.mother.firstName,
+          lastName: dataMother.mother.lastName,
+          email: dataMother.mother.email,
+          birthday: dataMother.mother.birthday,
+          firstDayOfLastPeriod: dataMother.mother.firstName,
+          conceptionDate: dataMother.mother.conceptionDate
+        },
+      }
+    }
+    case UPDATE_DATE_MOTHER_FAILED: {
+      return {
+        ...state,
+        getDateMotherRequest: false,
+        getDateMotherFailed: true,
+      }
     }
     default: {
       return state;

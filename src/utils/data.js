@@ -1,6 +1,59 @@
+export const dataMother = {
+  mother: {
+    firstName: 'Кристина',
+    lastName: 'Молодых',
+    email: 'molodost@gmail.com',
+    birthday: '05.06.1994',
+    firstDayOfLastPeriod: '02.03.2022',
+    conceptionDate: '22.03.2022'
+  },
+  isAuth: false,
+
+  registerRequest: false,
+  registerFailed: false,
+
+  loginRequest: false,
+  loginFailed: false,
+
+  logoutRequest: false,
+  logoutFailed: false,
+
+  getDateMotherRequest: false,
+  getDateMotherFailed: false,
+
+  updateDateMotherRequest: false,
+  updateDateMotherFailed: false,
+};
+
+export const dataChild = {
+  child: {
+    name: 'Маша',
+    date: '12 недель',
+    gender: 'девочка',
+    length: 7.4,
+    weight: 23,
+    sizeComparableTo: {
+      asFruits: 'Киви',
+      asAnimals: 'Цыпленок',
+      asSweets: 'Капкейк'
+    }
+  },
+  createDateChildRequest: false,
+  createDateChildFailed: false,
+
+  readDateChildRequest: false,
+  readDateChildFailed: false,
+
+  updateDateChildRequest: false,
+  updateDateChildFailed: false,
+
+  deleteDateChildRequest: false,
+  deleteDateChildFailed: false,
+};
+
 export const dataBabySize = [
   {
-    "id": 01,
+    "id": 1,
     "type": "fruits",
     "name": "Фрукты",
     "weeks": {
@@ -236,7 +289,7 @@ export const dataBabySize = [
     },
   },
   {
-    "id": 02,
+    "id": 2,
     "type": "animals",
     "name": "Животные",
     "weeks": {
@@ -472,7 +525,7 @@ export const dataBabySize = [
     },
   },
   {
-    "id": 03,
+    "id": 3,
     "type": "sweets",
     "name": "Сладости",
     "weeks": {

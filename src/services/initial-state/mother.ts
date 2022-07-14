@@ -2,7 +2,10 @@ export type TStateMother = {
   mother: {
     firstName: string,
     lastName: string,
-    email: string
+    email: string,
+    birthday: string,
+    firstDayOfLastPeriod: string,
+    conceptionDate: string
   },
   isAuth: boolean,
 
@@ -14,13 +17,22 @@ export type TStateMother = {
 
   logoutRequest: boolean,
   logoutFailed: boolean,
+
+  getDateMotherRequest: boolean,
+  getDateMotherFailed: boolean,
+
+  updateDateMotherRequest: boolean,
+  updateDateMotherFailed: boolean,
 };
 
-export const stateMother = {
+export const stateMother: TStateMother = {
   mother: {
     firstName: '',
     lastName: '',
-    email: ''
+    email: '',
+    birthday: '',
+    firstDayOfLastPeriod: '',
+    conceptionDate: ''
   },
   isAuth: false,
 
@@ -32,4 +44,10 @@ export const stateMother = {
 
   logoutRequest: false,
   logoutFailed: false,
+
+  getDateMotherRequest: false,
+  getDateMotherFailed: false,
+
+  updateDateMotherRequest: false,
+  updateDateMotherFailed: false,
 };
