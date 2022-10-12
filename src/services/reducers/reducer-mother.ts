@@ -37,12 +37,8 @@ export const reducerMother = (state = stateMother, action: TMotherActions): TSta
         registerRequest: false,
         registerFailed: false,
         mother: {
-          firstName: dataMother.mother.firstName,
-          lastName: dataMother.mother.lastName,
+          name: dataMother.mother.name,
           email: dataMother.mother.email,
-          birthday: dataMother.mother.birthday,
-          firstDayOfLastPeriod: dataMother.mother.firstName,
-          conceptionDate: dataMother.mother.conceptionDate
         },
         isAuth: true,
       };
@@ -69,12 +65,8 @@ export const reducerMother = (state = stateMother, action: TMotherActions): TSta
         loginFailed: false,
         isAuth: true,
         mother: {
-          firstName: dataMother.mother.firstName,
-          lastName: dataMother.mother.lastName,
+          name: dataMother.mother.name,
           email: dataMother.mother.email,
-          birthday: dataMother.mother.birthday,
-          firstDayOfLastPeriod: dataMother.mother.firstName,
-          conceptionDate: dataMother.mother.conceptionDate
         },
       };
     }
@@ -99,12 +91,8 @@ export const reducerMother = (state = stateMother, action: TMotherActions): TSta
         logoutFailed: false,
         logoutRequest: false,
         mother: {
-          firstName: '',
-          lastName: '',
+          name: '',
           email: '',
-          birthday: '',
-          firstDayOfLastPeriod: '',
-          conceptionDate: ''
         },
         isAuth: false,
       };
@@ -129,13 +117,10 @@ export const reducerMother = (state = stateMother, action: TMotherActions): TSta
         getDateMotherRequest: false,
         getDateMotherFailed: false,
         mother: {
-          firstName: dataMother.mother.firstName,
-          lastName: dataMother.mother.lastName,
+          name: dataMother.mother.name,
           email: dataMother.mother.email,
-          birthday: dataMother.mother.birthday,
-          firstDayOfLastPeriod: dataMother.mother.firstName,
-          conceptionDate: dataMother.mother.conceptionDate
         },
+        isAuth: true,
       }
     }
     case GET_DATE_MOTHER_FAILED: {
@@ -143,6 +128,7 @@ export const reducerMother = (state = stateMother, action: TMotherActions): TSta
         ...state,
         getDateMotherRequest: false,
         getDateMotherFailed: true,
+        isAuth: false,
       }
     }
     case UPDATE_DATE_MOTHER_REQUEST: {
@@ -158,12 +144,8 @@ export const reducerMother = (state = stateMother, action: TMotherActions): TSta
         getDateMotherRequest: false,
         getDateMotherFailed: true,
         mother: {
-          firstName: dataMother.mother.firstName,
-          lastName: dataMother.mother.lastName,
+          name: dataMother.mother.name,
           email: dataMother.mother.email,
-          birthday: dataMother.mother.birthday,
-          firstDayOfLastPeriod: dataMother.mother.firstName,
-          conceptionDate: dataMother.mother.conceptionDate
         },
       }
     }

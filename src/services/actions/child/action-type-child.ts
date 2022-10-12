@@ -15,11 +15,19 @@ export interface ICreateDateChildRequest {
 }
 export interface ICreateDateChildSuccess {
   readonly type: typeof CREATE_DATE_CHILD_SUCCESS;
-  name: string
-  date: number | null,
+  name: string,
+  termOfPregnancy: string,
+  firstDayOfLastPeriod: string,
+  conceptionDate: string,
+  childbirth: number | null,
   gender: string,
   growth: number | null,
-  weight: number | null
+  weight: number | null,
+  sizeComparableTo: {
+    asFruits: string,
+    asAnimals: string,
+    asSweets: string,
+  },
 }
 export interface IReadDateChildRequest {
   readonly type: typeof READ_DATE_CHILD_REQUEST;
@@ -32,11 +40,19 @@ export interface IUpdateDateChildRequest {
 }
 export interface IUpdateDateChildSuccess {
   readonly type: typeof UPDATE_DATE_CHILD_SUCCESS;
-  name: string
-  date: number | null,
+  name: string,
+  termOfPregnancy: string,
+  firstDayOfLastPeriod: string,
+  conceptionDate: string,
+  childbirth: number | null,
   gender: string,
   growth: number | null,
-  weight: number | null
+  weight: number | null,
+  sizeComparableTo: {
+    asFruits: string,
+    asAnimals: string,
+    asSweets: string,
+  },
 }
 export interface IDeleteDateChildRequest {
   readonly type: typeof DELETE_DATE_CHILD_REQUEST;

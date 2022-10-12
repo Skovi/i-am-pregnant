@@ -30,6 +30,7 @@ export const Register = () => {
       <form onSubmit={onSubmitForm} className='form'>
         <h2>Регистрация</h2>
         <input
+          className='input btn-size'
           type='text'
           name='name'
           placeholder='Имя'
@@ -37,6 +38,7 @@ export const Register = () => {
           onChange={onChangeInput}
         />
         <input
+          className='input'
           type='text'
           name='email'
           placeholder='Электронная почта'
@@ -44,15 +46,16 @@ export const Register = () => {
           onChange={onChangeInput}
         />
         <input
+          className='input'
           type='text'
           name='password'
           placeholder='Пароль'
           value={user.password}
           onChange={onChangeInput}
         />
-        <button 
-        onClick={onClick}
-        className='button'
+        <button
+          onClick={onClick}
+          className='input btn-size'
         >Сохранить</button>
       </form>
       <div className='links'>

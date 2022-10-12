@@ -1,0 +1,55 @@
+@media (min-width: 425px) {
+  
+}
+
+@media (min-width: 990px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+.container-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.container-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.size-comparable-to {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0.5%;
+}
+
+img {
+  width: 90%;
+}
+
+.list-size {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}

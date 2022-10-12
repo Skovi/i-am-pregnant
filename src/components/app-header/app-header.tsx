@@ -1,11 +1,13 @@
 import React from 'react';
 import "./app-header.scss";
 import { NavLink } from 'react-router-dom';
+import { useSelector } from '../../utils/hooks';
 
 export const AppHeader = () => {
+  const { name } = useSelector((store) => store.mother.mother);
   return (
     <header className='header'>
-      <nav>
+      <nav className='nav-header'>
         <NavLink
           to='/'
           exact
@@ -14,11 +16,18 @@ export const AppHeader = () => {
           Главная
         </NavLink>
         <NavLink
-          to='/profile'
+          to='/child'
           exact
           className='profile_link'
         >
-          Личный кабинет
+          Ребенок
+        </NavLink>
+        <NavLink
+          to='/mother'
+          exact
+          className='profile_link'
+        >
+          {name ? name : 'Личный кабинет'}
         </NavLink>
       </nav>
     </header>

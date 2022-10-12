@@ -16,7 +16,7 @@ import {
   DELETE_DATE_CHILD_FAILED
 } from '../actions/child/action-creator-child';
 import { stateChild, TStateChild } from "../initial-state/child";
-import { dataChild } from "../../utils/data";
+import { childSize, dataChild } from "../../utils/data";
 
 export const reducerChild = (state = stateChild, action: TChildActions): TStateChild => {
   switch (action.type) {
@@ -34,14 +34,17 @@ export const reducerChild = (state = stateChild, action: TChildActions): TStateC
         createDateChildFailed: true,
         child: {
           name: dataChild.child.name,
-          date: dataChild.child.date,
+          termOfPregnancy: dataChild.child.termOfPregnancy,
+          firstDayOfLastPeriod: dataChild.child.firstDayOfLastPeriod,
+          conceptionDate: dataChild.child.conceptionDate,
+          childbirth: dataChild.child.childbirth,
           gender: dataChild.child.gender,
-          length: dataChild.child.length,
-          weight: dataChild.child.weight,
+          length: childSize.length,
+          weight: childSize.weight,
           sizeComparableTo: {
-            asFruits: dataChild.child.sizeComparableTo.asFruits,
-            asAnimals: dataChild.child.sizeComparableTo.asAnimals,
-            asSweets: dataChild.child.sizeComparableTo.asSweets
+            asFruits: childSize.sizeComparableTo.asFruits,
+            asAnimals: childSize.sizeComparableTo.asAnimals,
+            asSweets: childSize.sizeComparableTo.asSweets
           }
         }
       };
@@ -60,14 +63,17 @@ export const reducerChild = (state = stateChild, action: TChildActions): TStateC
         readDateChildFailed: true,
         child: {
           name: dataChild.child.name,
-          date: dataChild.child.date,
+          termOfPregnancy: dataChild.child.termOfPregnancy,
+          firstDayOfLastPeriod: dataChild.child.firstDayOfLastPeriod,
+          conceptionDate: dataChild.child.conceptionDate,
+          childbirth: dataChild.child.childbirth,
           gender: dataChild.child.gender,
-          length: dataChild.child.length,
-          weight: dataChild.child.weight,
+          length: childSize.length,
+          weight: childSize.weight,
           sizeComparableTo: {
-            asFruits: dataChild.child.sizeComparableTo.asFruits,
-            asAnimals: dataChild.child.sizeComparableTo.asAnimals,
-            asSweets: dataChild.child.sizeComparableTo.asSweets
+            asFruits: childSize.sizeComparableTo.asFruits,
+            asAnimals: childSize.sizeComparableTo.asAnimals,
+            asSweets: childSize.sizeComparableTo.asSweets
           }
         }
       };
@@ -86,14 +92,17 @@ export const reducerChild = (state = stateChild, action: TChildActions): TStateC
         updateDateChildFailed: true,
         child: {
           name: dataChild.child.name,
-          date: dataChild.child.date,
+          termOfPregnancy: dataChild.child.termOfPregnancy,
+          firstDayOfLastPeriod: dataChild.child.firstDayOfLastPeriod,
+          conceptionDate: dataChild.child.conceptionDate,
+          childbirth: dataChild.child.childbirth,
           gender: dataChild.child.gender,
-          length: dataChild.child.length,
-          weight: dataChild.child.weight,
+          length: childSize.length,
+          weight: childSize.weight,
           sizeComparableTo: {
-            asFruits: dataChild.child.sizeComparableTo.asFruits,
-            asAnimals: dataChild.child.sizeComparableTo.asAnimals,
-            asSweets: dataChild.child.sizeComparableTo.asSweets
+            asFruits: childSize.sizeComparableTo.asFruits,
+            asAnimals: childSize.sizeComparableTo.asAnimals,
+            asSweets: childSize.sizeComparableTo.asSweets
           }
         }
       };
@@ -112,7 +121,10 @@ export const reducerChild = (state = stateChild, action: TChildActions): TStateC
         deleteDateChildFailed: true,
         child: {
           name: '',
-          date: '',
+          termOfPregnancy: '',
+          firstDayOfLastPeriod: '',
+          conceptionDate: '',
+          childbirth: '',
           gender: '',
           length: null,
           weight: null,

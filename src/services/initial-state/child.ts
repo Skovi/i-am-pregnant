@@ -1,15 +1,18 @@
 export type TStateChild = {
   child: {
-    name: string
-    date: string,
+    name: string,
+    termOfPregnancy: string,
+    firstDayOfLastPeriod: string,
+    conceptionDate: string,
+    childbirth: string,
     gender: string,
     length: number | null,
     weight: number | null,
     sizeComparableTo: {
       asFruits: string,
       asAnimals: string,
-      asSweets: string
-    }
+      asSweets: string,
+    },
   },
   createDateChildRequest: boolean,
   createDateChildFailed: boolean,
@@ -27,14 +30,17 @@ export type TStateChild = {
 export const stateChild: TStateChild = {
   child: {
     name: '',
-    date: '',
+    termOfPregnancy: '',
+    firstDayOfLastPeriod: '',
+    conceptionDate: '',
+    childbirth: '',
     gender: '',
     length: null,
     weight: null,
     sizeComparableTo: {
       asFruits: '',
       asAnimals: '',
-      asSweets: ''
+      asSweets: '',
     }
   },
   createDateChildRequest: false,

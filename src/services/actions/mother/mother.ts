@@ -55,12 +55,8 @@ export const getDateMother: TThunk = () => {
     dispatch({
       type: GET_DATE_MOTHER_SUCCESS,
       mother: {
-        firstName: dataMother.mother.firstName,
-        lastName: dataMother.mother.lastName,
+        name: dataMother.mother.name,
         email: dataMother.mother.email,
-        birthday: dataMother.mother.birthday,
-        firstDayOfLastPeriod: dataMother.mother.firstName,
-        conceptionDate: dataMother.mother.conceptionDate
       }
     })
   }

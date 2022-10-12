@@ -27,12 +27,8 @@ export interface IRegisterRequestAction {
 export interface IRegisterSuccessAction {
   readonly type: typeof REGISTER_SUCCESS;
   mother: {
-    firstName: string,
-    lastName: string,
+    name: string,
     email: string,
-    birthday: string,
-    firstDayOfLastPeriod: string,
-    conceptionDate: string
   };
 }
 
@@ -43,12 +39,8 @@ export interface ILoginRequestAction {
 export interface ILoginSuccessAction {
   readonly type: typeof LOGIN_SUCCESS;
   mother: {
-    firstName: string,
-    lastName: string,
+    name: string,
     email: string,
-    birthday: string,
-    firstDayOfLastPeriod: string,
-    conceptionDate: string
   };
 }
 
@@ -67,12 +59,8 @@ export interface IUpdateDateMotherRequestAction {
 export interface IUpdateDateMotherSuccessAction {
   readonly type: typeof UPDATE_DATE_MOTHER_SUCCESS;
   mother: {
-    firstName: string,
-    lastName: string,
+    name: string,
     email: string,
-    birthday: string,
-    firstDayOfLastPeriod: string,
-    conceptionDate: string
   }
 }
 
@@ -83,12 +71,8 @@ export interface IGetDateMotherRequestAction {
 export interface IGetDateMotherSuccessAction {
   readonly type: typeof GET_DATE_MOTHER_SUCCESS;
   mother: {
-    firstName: string,
-    lastName: string,
+    name: string,
     email: string,
-    birthday: string,
-    firstDayOfLastPeriod: string,
-    conceptionDate: string
   }
 }
 

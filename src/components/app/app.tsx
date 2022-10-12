@@ -8,14 +8,15 @@ import {
   useLocation,
 } from 'react-router-dom'
 import { Main } from '../../pages/main/main';
-import { Profile } from '../../pages/profile/profile';
-import { ProfileChild } from '../../pages/profile-child/profile-child';
-import { ProfileMother } from '../../pages/profile-mother/profile-mother';
+import { Child } from '../../pages/child/child';
+import { Mother } from '../../pages/mother/mother';
 import { Timeline } from '../../pages/timeline/timeline';
 import { ForgotPassword } from '../../pages/forgot-password/forgot-password';
 import { ResetPassword } from '../../pages/reset-password/reset-password';
 import { Register } from '../../pages/register/register';
 import { Login } from '../../pages/login/login';
+import { MainWithoutLogin } from '../../pages/main-without-login/main-without-login';
+import { ProtectedRoute } from '../protected-route/protected-route';
 
 
 
@@ -25,17 +26,17 @@ export const App = () => {
     <Router>
       <AppHeader />
       <Switch>
-        <Route path='/' exact>
+        <ProtectedRoute path='/' exact>
           <Main />
+        </ProtectedRoute>
+        < Route path='/main' exact>
+          <MainWithoutLogin/>
         </Route>
-        <Route path='/profile' exact>
-          <Profile />
+        <Route path='/child' exact>
+          <Child />
         </Route>
-        <Route path='/profile/child' exact>
-          <ProfileChild />
-        </Route>
-        <Route path='/profile/mother' exact>
-          <ProfileMother />
+        <Route path='/mother' exact>
+          <Mother />
         </Route>
         <Route path='/timeline' exact>
           <Timeline />

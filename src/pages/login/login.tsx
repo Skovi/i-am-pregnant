@@ -43,7 +43,7 @@ export const Login = () => {
           value={user.password}
           onChange={onChangeInput}
         />
-        <button 
+        <button
         onClick={onClick}
         className='button'
         >Сохранить</button>
